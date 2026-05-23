@@ -1,22 +1,22 @@
 # 🎵 YouTube Music Downloader
 
-YouTube Music üzerinden sanatçıların en popüler şarkılarını veya playlist içerisindeki müzikleri yüksek kaliteli MP3 formatında indirmenizi sağlayan Python projesi.
+A Python project that lets you download popular songs for artists or playlist tracks from YouTube Music as high-quality MP3 files.
 
 ---
 
-# 🚀 Özellikler
+# 🚀 Features
 
-- 🎤 Sanatçı bazlı en popüler şarkıları indirme
-- 📃 Playlist içindeki şarkıları direkt indirme
-- 🎧 Yüksek kaliteli MP3 dönüştürme
-- 🚫 Remix / slowed / live / spam içerik filtreleme
-- 📁 Sanatçıya özel klasör oluşturma
-- 🔁 Duplicate şarkı engelleme
-- ⚡ Otomatik YouTube video seçimi
+- 🎤 Download top songs for artists
+- 📃 Download songs directly from a playlist
+- 🎧 High-quality MP3 conversion
+- 🚫 Filter remix / slowed / live / spam content
+- 📁 Create artist-specific folders
+- 🔁 Prevent duplicate downloads
+- ⚡ Automatic YouTube video selection
 
 ---
 
-# 📦 Kullanılan Teknolojiler
+# 📦 Technologies Used
 
 - Python 3.13+
 - yt-dlp
@@ -25,18 +25,18 @@ YouTube Music üzerinden sanatçıların en popüler şarkılarını veya playli
 
 ---
 
-# ⚙️ Kurulum
+# ⚙️ Installation
 
-## 1. Projeyi Klonlayın
+## 1. Clone the project
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/music-downloader.git
+git clone https://github.com/USERNAME/music-downloader.git
 cd music-downloader
 ```
 
 ---
 
-## 2. Gereksinimleri Kurun
+## 2. Install requirements
 
 ```bash
 pip install -r requirements.txt
@@ -44,24 +44,24 @@ pip install -r requirements.txt
 
 ---
 
-## 3. FFmpeg Kurulumu
+## 3. Install FFmpeg
 
-Bu proje MP3 dönüştürme için FFmpeg kullanır.
+This project uses FFmpeg for MP3 conversion.
 
 ## Windows
 
-1. FFmpeg indir:
+1. Download FFmpeg:
    https://ffmpeg.org/download.html
 
-2. Zip dosyasını çıkart
+2. Extract the ZIP archive
 
-3. Şu klasöre yerleştir:
+3. Place it in a folder such as:
 
 ```text
 C:\ffmpeg\bin
 ```
 
-4. Şu dosyaların bulunduğundan emin olun:
+4. Make sure the following files exist:
 
 ```text
 ffmpeg.exe
@@ -72,7 +72,7 @@ ffprobe.exe
 
 # 📂 artists.txt
 
-Sanatçı isimlerini satır satır yazın:
+Write artist names one per line:
 
 ```text
 Eminem
@@ -85,9 +85,9 @@ Barış Manço
 
 # 🚫 non_contains.txt
 
-İstenmeyen içerikleri filtrelemek için kullanılır.
+Used to filter unwanted content.
 
-Örnek:
+Example:
 
 ```text
 remix
@@ -100,9 +100,9 @@ cover
 
 ---
 
-# ▶️ Kullanım
+# ▶️ Usage
 
-Programı çalıştır:
+Run the program:
 
 ```bash
 python main.py
@@ -110,30 +110,30 @@ python main.py
 
 ---
 
-# 🎤 Sanatçı Modu
+# 🎤 Artist Mode
 
-- artists.txt içerisindeki sanatçıları okur
-- En popüler şarkıları bulur
-- YouTube üzerinden en uygun videoyu seçer
-- MP3 olarak indirir
-
----
-
-# 📃 Playlist Modu
-
-- YouTube Music playlist linki girilir
-- Playlist içindeki gerçek videolar alınır
-- Direkt MP3 olarak indirilir
+- Reads artists from `artists.txt`
+- Finds top songs
+- Selects the best YouTube video
+- Downloads as MP3
 
 ---
 
-# 📁 Çıktı Yapısı
+# 📃 Playlist Mode
 
-İndirilen müzikler masaüstünde tarih bazlı klasöre kaydedilir:
+- Enter a YouTube Music playlist URL
+- Extracts actual playlist videos
+- Downloads them directly as MP3
+
+---
+
+# 📁 Output Structure
+
+Downloads are saved to a date-based folder on the Desktop:
 
 ```text
 Desktop/
-   220520260236/
+   22-05-2026-02-36/
       Eminem/
          Lose Yourself.mp3
       Barış Manço/
@@ -151,14 +151,14 @@ ytmusicapi
 
 ---
 
-# ⚠️ Notlar
+# ⚠️ Notes
 
-- Bazı videolar YouTube tarafından engellenmiş olabilir.
-- Bazı şarkılar filtre nedeniyle bilinçli olarak atlanabilir.
-- Çok büyük playlistlerde YouTube rate-limit uygulayabilir.
+- Some videos may be blocked by YouTube.
+- Some songs may be intentionally skipped by the filter.
+- Very large playlists may hit YouTube rate limits.
 
 ---
 
-# 📄 Lisans
+# 📄 License
 
 MIT License

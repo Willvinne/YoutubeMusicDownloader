@@ -17,10 +17,10 @@ def load_artists():
 
 def main():
     clear_terminal()
-    print("🎵 YouTube Müzik İndirici 🎵")
-    print("1. Sanatçı İndirici")
-    print("2. Çalma Listesi İndirici")
-    choice = input("Seçiminiz: ")
+    print("🎵 YouTube Music Downloader 🎵")
+    print("1. Artist Downloader")
+    print("2. Playlist Downloader")
+    choice = input("Your choice: ")
     if choice == "1":
         artistDownloader()
     elif choice == "2":
@@ -39,7 +39,7 @@ def playlistDownloader():
 
     seen = set()
 
-    print("Bulunan şarkılar:", len(tracks))
+    print("Tracks found:", len(tracks))
 
     for track in tracks:
 
@@ -51,7 +51,7 @@ def playlistDownloader():
 
         seen.add(video_id)
 
-        print("\n⬇ indiriliyor:", title)
+        print("\n⬇ downloading:", title)
 
         download_mp3(video_id, playlist_folder)
 
@@ -67,24 +67,24 @@ def artistDownloader():
         tracks = get_artist_top_tracks(artist, limit=10)
         tracks = clean_tracks(tracks)
 
-        print("Bulunan şarkılar:", len(tracks))
+        print("Tracks found:", len(tracks))
 
         for track in tracks:
             if track in seen:
                 continue
             seen.add(track)
 
-            print("\n🔎 Aranıyor:", track)
+            print("\n🔎 Searching:", track)
 
             video = search_best_video(track)
 
             if not video:
-                print("❌ bulunamadı")
+                print("❌ not found")
                 continue
 
             video_id = video["videoId"]
 
-            print("⬇ indiriliyor:", video["title"])
+            print("⬇ downloading:", video["title"])
 
             artist_folder = create_artist_folder(base_folder, artist)
 
