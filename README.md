@@ -30,7 +30,7 @@ A Python project that lets you download popular songs for artists or playlist tr
 ## 1. Clone the project
 
 ```bash
-git clone https://github.com/USERNAME/music-downloader.git
+git clone https://github.com/Willvinne/YoutubeMusicDownloader.git
 cd music-downloader
 ```
 
@@ -142,14 +142,6 @@ Desktop/
 
 ---
 
-# 📌 requirements.txt
-
-```text
-yt-dlp
-ytmusicapi
-```
-
----
 
 # ⚠️ Notes
 
