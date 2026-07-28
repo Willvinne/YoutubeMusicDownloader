@@ -31,8 +31,7 @@ A Python project that lets you download popular songs for artists or playlist tr
 
 ```bash
 git clone https://github.com/Willvinne/YoutubeMusicDownloader.git
-cd music-downloader
-```
+cd YoutubeMusicDownloader
 
 ---
 
